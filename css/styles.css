@@ -78,7 +78,9 @@ img {
 .centrar-texto {
     text-align: center;
 }
-
+.btn3:hover {
+    color: var(--blanco);
+}
 /*------------------------------- Header --------------------------------*/
 
 .header {
