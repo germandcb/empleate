@@ -86,13 +86,26 @@ img {
     box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.75);
 }
 .cabecera {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    display: grid;
+    text-align: center;
+}
+
+@media (min-width: 900px) {
+    .cabecera {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
 
 .header__logo {
-    width: 35%;
+    width: 100%;
+}
+
+@media (min-width: 900px) {
+    .header__logo {
+        width: 35%;
+    }
 }
 
 .hader__Logo--img {
@@ -102,9 +115,17 @@ img {
     width: auto;
 }
 .header__menu__nav__ul {
-    display: flex;
+    display: grid;
     list-style-type: none;
-    gap: 2rem;
+    margin-left: -4rem;
+}
+
+@media (min-width: 900px) {
+    .header__menu__nav__ul {
+        display: flex;
+        list-style-type: none;
+        gap: 2rem;
+    }
 }
 
 .a {
@@ -120,6 +141,8 @@ img {
     color: var(--secundario);
 }
 
+
+
 /*--------------------------------------- Hero -----------------------------------------------*/
 .hero {
     background-color: #12a634b9;
@@ -127,9 +150,23 @@ img {
 .hero__main {
     align-items: center;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr;
     gap: 6rem;
     height: 70rem;
+}
+@media (min-width: 700px) {
+    .hero__main {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+.hero__vect {
+    display: none;
+}
+@media (min-width: 700px) {
+    .hero__vect {
+        display: inline-flex;
+        width: 40rem;
+    }
 }
 
 /*------------------------------------- Materias -----------------------------------------------*/
@@ -183,8 +220,24 @@ img {
 .documento {
     display: grid;
     padding-bottom: 3rem;
-    grid-template-columns:repeat(2, 1fr);
+    grid-template-columns:1fr;
     align-items: center;
+}
+
+@media (min-width: 700px) {
+    .documento {
+        grid-template-columns:repeat(2, 1fr);
+    }
+}
+
+.documento__video {
+    grid-row: 1 / 2;
+}
+
+@media (min-width: 700px) {
+    .documento__video {
+        grid-column: 2 / 3;
+    }
 }
 
 .documento__video__vd {
